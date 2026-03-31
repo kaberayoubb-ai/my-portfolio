@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ayoub Kaber | Développeur Full Stack Junior – Espagne · France · Canada</title>
+  <meta name="description" content="Ayoub Kaber – Développeur Full Stack Junior diplômé DTS MIAGE. Java, C#, .NET, React, Tailwind, MySQL. Disponible en Espagne, France et Canada.">
+  <meta name="keywords" content="Junior Full Stack Developer, React Developer, Java Developer, .NET Developer, développeur web junior, Ayoub Kaber portfolio, DTS MIAGE">
+  <meta name="author" content="Ayoub Kaber">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ayoubkaber.dev/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ayoubkaber.dev/">
+  <meta property="og:title" content="Ayoub Kaber | Développeur Full Stack Junior">
+  <meta property="og:description" content="Full Stack Developer – Java · C# · .NET · React · Tailwind · MySQL · Docker">
+  <meta property="og:image" content="https://ayoubkaber.dev/images/ayoub.jpg">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230d0d0d'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='900' font-size='14' fill='%23c8f135'>AK</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Ayoub Kaber","jobTitle":"Junior Full Stack Developer","description":"Développeur Full Stack Junior diplômé DTS MIAGE, spécialisé en Java, C#, .NET, React.","url":"https://ayoubkaber.dev","email":"contactkaberayoub@gmail.com","sameAs":["https://www.linkedin.com/in/ayyoub-kaber-54bb39328","https://github.com/ayoubkaber"],"knowsAbout":["Java","C#",".NET","React","JavaScript","MySQL","SQL Server","Docker","Git","HTML5","CSS3","Tailwind"],"alumniOf":{"@type":"EducationalOrganization","name":"DTS MIAGE"}}
+  </script>
+
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+    :root{
+      --bg:#0d0d0d;
+      --bg2:#141414;
+      --bg3:#1c1c1c;
+      --surface:#222;
+      --border:rgba(255,255,255,.06);
+      --border-h:rgba(255,255,255,.14);
+      --text:#edeae3;
+      --muted:#5a5852;
+      --muted2:#8a8680;
+      --accent:#c8f135;
+      --accent2:#a8d018;
+      --accent-dim:rgba(200,241,53,.08);
+      --accent-glow:rgba(200,241,53,.15);
+      --ff-d:'Bebas Neue',sans-serif;
+      --ff-b:'DM Sans',sans-serif;
+      --ff-m:'JetBrains Mono',monospace;
+      --r:6px;
+    }
+
+    html{scroll-behavior:smooth}
+    body{background:var(--bg);color:var(--text);font-family:var(--ff-b);font-size:16px;line-height:1.7;overflow-x:hidden;cursor:none}
+
+    /* NOISE TEXTURE */
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9997;opacity:.5}
+
+    /* ACCESSIBILITY */
+    .skip-link{position:absolute;top:-40px;left:1rem;background:var(--accent);color:#0d0d0d;padding:8px 16px;font-family:var(--ff-m);font-size:12px;border-radius:2px;z-index:10000;transition:top .2s;text-decoration:none}
+    .skip-link:focus{top:1rem}
+    :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+    /* CURSOR */
+    #cur{position:fixed;width:7px;height:7px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:width .15s,height .15s}
+    #cur-ring{position:fixed;width:30px;height:30px;border:1px solid var(--accent);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);opacity:.35;transition:width .25s,height .25s,opacity .25s}
+    body.hovering #cur{width:14px;height:14px}
+    body.hovering #cur-ring{width:48px;height:48px;opacity:.18}
+    @media(hover:none){#cur,#cur-ring{display:none}body{cursor:auto}}
+    ::-webkit-scrollbar{width:2px}
+    ::-webkit-scrollbar-track{background:var(--bg)}
+    ::-webkit-scrollbar-thumb{background:var(--accent)}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.1rem 5vw;background:rgba(13,13,13,.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+    .nav-logo{font-family:var(--ff-d);font-size:1.6rem;letter-spacing:.04em;color:var(--text);text-decoration:none;line-height:1}
+    .nav-logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:2.5rem}
+    .nav-links a{font-family:var(--ff-m);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted2);text-decoration:none;transition:color .2s;position:relative}
+    .nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--accent);transition:width .25s}
+    .nav-links a:hover{color:var(--accent)}
+    .nav-links a:hover::after{width:100%}
+    .lang-sw{display:flex;gap:2px;align-items:center}
+    .lb{font-family:var(--ff-m);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;border:1px solid transparent;border-radius:2px;background:none;color:var(--muted);cursor:none;transition:color .2s,border-color .2s}
+    .lb:hover{color:var(--accent)}.lb.active{color:var(--accent);border-color:rgba(200,241,53,.4)}
+    .lsep{color:var(--border-h);font-size:10px;font-family:var(--ff-m);user-select:none}
+     
+    .hero-img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+  transform: scale(1.03);
+}
+    /* HERO */
+    #home{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:9rem 5vw 5rem;position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+
+    /* accent glow behind hero */
+    #home::after{content:'';position:absolute;bottom:-10%;right:0;width:55%;height:70%;background:radial-gradient(ellipse at 80% 50%,rgba(200,241,53,.06) 0%,transparent 70%);pointer-events:none}
+
+    .status-pill{display:inline-flex;align-items:center;gap:8px;padding:5px 14px;border:1px solid rgba(200,241,53,.28);border-radius:99px;font-family:var(--ff-m);font-size:10px;letter-spacing:.12em;color:var(--accent);margin-bottom:1.5rem;opacity:0;animation:fadeUp .5s .1s forwards}
+    .status-dot{width:6px;height:6px;background:var(--accent);border-radius:50%;animation:pulse 2s infinite}
+
+    .hero-role{font-family:var(--ff-m);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted2);margin-bottom:1rem;opacity:0;animation:fadeUp .5s .2s forwards;display:flex;align-items:center;gap:10px}
+    .hero-role::before{content:'';width:28px;height:1px;background:var(--accent)}
+
+    .hero-h1{font-family:var(--ff-d);font-size:clamp(4.5rem,10vw,8rem);line-height:.92;letter-spacing:.02em;opacity:0;animation:fadeUp .7s .3s forwards}
+    .hero-h1 .dim{color:transparent;-webkit-text-stroke:1px var(--muted)}
+
+    .hero-sub{font-size:1.1rem;color:var(--muted2);margin-top:1.75rem;max-width:440px;line-height:1.75;font-style:italic;opacity:0;animation:fadeUp .6s .45s forwards}
+
+    .hero-cta{display:flex;gap:1rem;margin-top:2.5rem;flex-wrap:wrap;opacity:0;animation:fadeUp .6s .6s forwards}
+    .btn-primary{font-family:var(--ff-m);font-size:11px;letter-spacing:.15em;text-transform:uppercase;padding:13px 30px;background:var(--accent);color:#0d0d0d;border:none;border-radius:2px;text-decoration:none;cursor:none;font-weight:600;display:inline-block;transition:background .2s,transform .15s}
+    .btn-primary:hover{background:var(--accent2);transform:translateY(-2px)}
+    .btn-outline{font-family:var(--ff-m);font-size:11px;letter-spacing:.15em;text-transform:uppercase;padding:13px 30px;background:none;color:var(--text);border:1px solid var(--border-h);border-radius:2px;text-decoration:none;cursor:none;transition:border-color .2s,color .2s,transform .15s}
+    .btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+
+    /* CODE CARD */
+    .hero-visual{opacity:0;animation:fadeUp .8s .4s forwards}
+    .code-card{background:var(--bg2);border:1px solid var(--border-h);border-radius:10px;overflow:hidden;font-family:var(--ff-m);font-size:12.5px;line-height:1.85;box-shadow:0 32px 80px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.03) inset}
+    .code-bar{display:flex;align-items:center;gap:8px;padding:11px 16px;border-bottom:1px solid var(--border);background:var(--bg3)}
+    .code-dot{width:10px;height:10px;border-radius:50%}
+    .code-dot.r{background:#ff5f57}.code-dot.y{background:#febc2e}.code-dot.g{background:#28c840}
+    .code-file{font-size:10px;color:var(--muted);margin-left:4px;letter-spacing:.06em}
+    .code-tab{font-size:10px;color:var(--muted);padding:2px 10px;border-radius:3px 3px 0 0;margin-left:4px}
+    .code-tab.active-tab{color:var(--accent);background:rgba(200,241,53,.07);border-bottom:1px solid var(--accent)}
+    .code-body{padding:1.5rem 1.75rem}
+    .c-grey{color:var(--muted)}.c-green{color:#7ec8a4}.c-yellow{color:#e8d08a}.c-blue{color:#7ab4e0}.c-acc{color:var(--accent)}.c-red{color:#e07a7a}
+    .code-footer{display:flex;align-items:center;gap:6px;padding:8px 16px;border-top:1px solid var(--border);background:var(--bg3);font-size:10px;color:var(--muted)}
+    .cf-dot{width:7px;height:7px;border-radius:50%;display:inline-block;background:var(--muted)}
+    .cf-dot.on{background:var(--accent);animation:pulse 2s infinite}
+    .cf-sep{margin:0 4px;opacity:.4}
+    .type-cursor{display:inline-block;width:2px;height:1em;background:var(--accent);vertical-align:middle;animation:blink .7s step-end infinite;margin-left:2px}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+    /* SECTIONS */
+    .section{padding:7rem 5vw;border-top:1px solid var(--border)}
+    .s-label{font-family:var(--ff-m);font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem;display:flex;align-items:center;gap:12px}
+    .s-label::before{content:'';width:28px;height:1px;background:var(--accent)}
+    .s-title{font-family:var(--ff-d);font-size:clamp(2.8rem,6vw,5rem);letter-spacing:.02em;line-height:1;margin-bottom:3rem}
+    .s-title em{font-style:italic;color:var(--muted2);font-family:var(--ff-b);font-weight:300;font-size:.55em;letter-spacing:0}
+
+    /* ABOUT – redesigned: no photo, rich text + stat grid */
+    .about-layout{display:grid;grid-template-columns:1fr 1.2fr;gap:6rem;align-items:start}
+    .about-headline{font-family:var(--ff-d);font-size:clamp(2.5rem,5vw,4rem);letter-spacing:.02em;line-height:1.05;margin-bottom:2rem}
+    .about-headline span{color:var(--accent)}
+    .about-text p{font-size:1.05rem;color:var(--muted2);line-height:1.85;margin-bottom:1.25rem}
+    .about-text p strong{color:var(--text);font-weight:500}
+    .about-text p em{font-style:italic;color:var(--muted2)}
+
+    .about-pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.75rem}
+    .pill{font-family:var(--ff-m);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:5px 13px;border:1px solid var(--border-h);border-radius:99px;color:var(--muted2);transition:border-color .2s,color .2s}
+    .pill:hover{border-color:var(--accent);color:var(--accent)}
+
+    .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:2.5rem}
+    .stat-cell{background:var(--bg2);padding:1.75rem 1.5rem;transition:background .2s}
+    .stat-cell:hover{background:var(--surface)}
+    .stat-num{font-family:var(--ff-d);font-size:3rem;color:var(--accent);line-height:1;letter-spacing:.02em}
+    .stat-lbl{font-family:var(--ff-m);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+
+    .what-i-do{display:flex;flex-direction:column;gap:1px;margin-top:0}
+    .do-item{display:flex;gap:1.25rem;align-items:flex-start;padding:1.25rem 1.5rem;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);margin-bottom:8px;transition:border-color .25s,background .25s}
+    .do-item:hover{border-color:rgba(200,241,53,.25);background:var(--surface)}
+    .do-icon{width:36px;height:36px;border-radius:8px;background:var(--accent-dim);border:1px solid rgba(200,241,53,.15);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+    .do-text strong{font-family:var(--ff-m);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--text);display:block;margin-bottom:4px}
+    .do-text span{font-size:.9rem;color:var(--muted2);line-height:1.6}
+
+    /* EXPERIENCE */
+    .exp-list{display:flex;flex-direction:column;gap:2px}
+    .exp-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:2.25rem;transition:border-color .25s,background .25s;position:relative;overflow:hidden}
+    .exp-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent);opacity:0;transition:opacity .25s}
+    .exp-card:hover{border-color:rgba(200,241,53,.2);background:var(--surface)}
+    .exp-card:hover::before{opacity:1}
+    .exp-header{display:flex;justify-content:space-between;align-items:flex-start;gap:2rem;margin-bottom:1rem;flex-wrap:wrap}
+    .exp-date{font-family:var(--ff-m);font-size:10px;letter-spacing:.12em;color:var(--accent);background:var(--accent-dim);border:1px solid rgba(200,241,53,.18);padding:4px 10px;border-radius:2px;white-space:nowrap}
+    .exp-company{font-family:var(--ff-m);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:.3rem}
+    .exp-role{font-family:var(--ff-d);font-size:1.6rem;letter-spacing:.02em;color:var(--text);margin-bottom:.2rem}
+    .exp-location{font-family:var(--ff-m);font-size:10px;color:var(--muted);letter-spacing:.08em;margin-bottom:1rem}
+    .exp-desc{font-size:.95rem;color:var(--muted2);line-height:1.8;margin-bottom:1.25rem}
+    .exp-tasks{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.25rem}
+    .exp-tasks li{font-size:.9rem;color:var(--muted2);line-height:1.65;padding-left:1.25rem;position:relative}
+    .exp-tasks li::before{content:'▸';position:absolute;left:0;color:var(--accent);font-size:.7rem;top:.2rem}
+    .exp-tech{display:flex;flex-wrap:wrap;gap:6px}
+    .exp-badge{font-family:var(--ff-m);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:3px 10px;border:1px solid rgba(200,241,53,.18);border-radius:2px;color:var(--accent);background:var(--accent-dim)}
+
+    /* SKILLS */
+    .skills-intro{font-size:1rem;color:var(--muted2);max-width:580px;margin-bottom:3rem;line-height:1.8;font-style:italic}
+    .skills-categories{display:flex;flex-direction:column;gap:3rem}
+    .skill-cat-label{font-family:var(--ff-m);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;display:flex;align-items:center;gap:12px}
+    .skill-cat-label::after{content:'';flex:1;height:1px;background:var(--border)}
+    .skills-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}
+    .skill-card{display:flex;flex-direction:column;align-items:center;gap:10px;padding:1.5rem 1rem;background:var(--bg2);border:1px solid var(--border);border-radius:10px;transition:border-color .25s,background .25s,transform .2s;cursor:none;position:relative;overflow:hidden}
+    .skill-card::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 50% 0%,rgba(200,241,53,.07),transparent 68%);opacity:0;transition:opacity .3s}
+    .skill-card:hover{border-color:rgba(200,241,53,.3);background:var(--surface);transform:translateY(-4px)}
+    .skill-card:hover::after{opacity:1}
+    .skill-icon{font-size:1.75rem;line-height:1}
+    .skill-name{font-family:var(--ff-m);font-size:10px;letter-spacing:.1em;color:var(--muted2);text-transform:uppercase;text-align:center;transition:color .2s}
+    .skill-card:hover .skill-name{color:var(--accent)}
+    .skill-bar{width:100%;height:2px;background:var(--border);border-radius:2px;overflow:hidden;margin-top:2px}
+    .skill-fill{height:100%;background:var(--accent);border-radius:2px;width:0;transition:width 1s ease .1s}
+    .skill-card.in .skill-fill{width:var(--lvl)}
+    .skill-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3));
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-img {
+  transform: scale(1.1);
+}
+
+    /* PROJECTS */
+    .projects-list{display:flex;flex-direction:column;gap:2px}
+    .proj{display:grid;grid-template-columns:3rem 1fr auto;align-items:center;gap:2rem;padding:2rem 2rem;background:var(--bg2);border:1px solid transparent;border-radius:var(--r);transition:border-color .25s,background .25s,padding-left .25s;cursor:none}
+    .proj:hover{border-color:rgba(200,241,53,.2);background:var(--surface);padding-left:2.5rem}
+    .proj-num{font-family:var(--ff-m);font-size:11px;color:var(--accent);letter-spacing:.1em}
+    .proj-title{font-family:var(--ff-d);font-size:clamp(1.3rem,2.5vw,1.9rem);letter-spacing:.02em;color:var(--text);transition:color .2s}
+    .proj:hover .proj-title{color:var(--accent)}
+    .proj-desc{font-size:.9rem;color:var(--muted2);margin-top:.35rem;max-width:580px;line-height:1.65}
+    .proj-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:.75rem}
+    .proj-tag{font-family:var(--ff-m);font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border:1px solid var(--border-h);border-radius:2px;color:var(--muted2)}
+    .proj-arrow{font-size:1.5rem;color:var(--muted);transition:color .2s,transform .3s}
+    .proj:hover .proj-arrow{color:var(--accent);transform:translate(3px,-3px)}
+
+    /* CONTACT */
+    .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+    .contact-big{font-family:var(--ff-d);font-size:clamp(3.5rem,9vw,7rem);letter-spacing:.02em;line-height:.9;margin-bottom:1.75rem}
+    .contact-big .hollow{-webkit-text-stroke:1.5px var(--text);color:transparent}
+    .contact-note{color:var(--muted2);font-style:italic;font-size:1rem;max-width:360px;line-height:1.75}
+    .social-links{display:flex;flex-direction:column;gap:.6rem;margin-top:2rem}
+    .soc-link{display:flex;align-items:center;gap:12px;font-family:var(--ff-m);font-size:11px;letter-spacing:.08em;color:var(--muted2);text-decoration:none;padding:.85rem 1.1rem;border:1px solid var(--border);border-radius:var(--r);transition:border-color .2s,color .2s,background .2s}
+    .soc-link:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim)}
+    .soc-icon{font-size:.95rem;width:20px;text-align:center;opacity:.7}
+
+    /* FORM */
+    .contact-form{display:flex;flex-direction:column;gap:1rem}
+    .form-group{display:flex;flex-direction:column;gap:5px}
+    .form-label{font-family:var(--ff-m);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+    .form-input,.form-textarea{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);color:var(--text);font-family:var(--ff-b);font-size:.95rem;padding:.8rem 1.1rem;outline:none;transition:border-color .2s,box-shadow .2s;cursor:none;width:100%}
+    .form-input:focus,.form-textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(200,241,53,.07)}
+    .form-input.invalid,.form-textarea.invalid{border-color:#e07a7a}
+    .field-err{font-family:var(--ff-m);font-size:10px;color:#e07a7a;display:none}
+    .field-err.show{display:block}
+    .form-textarea{resize:vertical;min-height:130px}
+    .form-hp{display:none}
+    .form-status{font-family:var(--ff-m);font-size:11px;letter-spacing:.06em;padding:.8rem 1rem;border-radius:var(--r);display:none;line-height:1.6}
+    .form-status.ok{display:block;background:rgba(200,241,53,.08);border:1px solid rgba(200,241,53,.2);color:var(--accent)}
+    .form-status.err{display:block;background:rgba(224,122,122,.08);border:1px solid rgba(224,122,122,.2);color:#e07a7a}
+    .btn-primary:disabled{opacity:.5;cursor:not-allowed;transform:none}
+    .char-count{font-family:var(--ff-m);font-size:9px;color:var(--muted);text-align:right;margin-top:3px}
+
+    /* FOOTER */
+    footer{padding:2rem 5vw;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;font-family:var(--ff-m);font-size:10px;letter-spacing:.15em;color:var(--muted);text-transform:uppercase;flex-wrap:wrap;gap:8px}
+    footer .footer-accent{color:var(--accent)}
+
+    /* ANIMATIONS */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.8)}}
+    .reveal{opacity:0;transform:translateY(26px);transition:opacity .65s ease,transform .65s ease}
+    .reveal.in{opacity:1;transform:none}
+    .lang-fade{transition:opacity .2s ease}
+    .lang-fade.sw{opacity:0}
+
+    /* DIVIDER LINE */
+    .line-deco{width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);margin:0;opacity:.2}
+
+    /* RESPONSIVE */
+    @media(max-width:960px){
+      .hero-grid,.about-layout,.contact-wrap{grid-template-columns:1fr}
+      .hero-visual,.nav-links{display:none}
+    }
+    @media(max-width:640px){
+      .proj{grid-template-columns:2rem 1fr;gap:1rem}
+      .proj-arrow{display:none}
+      footer{flex-direction:column;text-align:center}
+      .skills-row{grid-template-columns:repeat(auto-fill,minmax(110px,1fr))}
+      .stat-grid{grid-template-columns:1fr 1fr}
+    }
+    @media print{#cur,#cur-ring,nav,.hero-visual{display:none}body{cursor:auto;background:#fff;color:#000}.section{border:none;padding:2rem 0}}
+  </style>
+</head>
+
+<body>
+<a href="#main" class="skip-link">Aller au contenu</a>
+<div id="cur" aria-hidden="true"></div>
+<div id="cur-ring" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav role="navigation" aria-label="Navigation principale">
+  <a href="#home" class="nav-logo" aria-label="Accueil">AK<span>.</span></a>
+  <div class="nav-links">
+    <a href="#about"      data-i18n="nav_about"></a>
+    <a href="#experience" data-i18n="nav_exp"></a>
+    <a href="#skills"     data-i18n="nav_skills"></a>
+    <a href="#projects"   data-i18n="nav_projects"></a>
+    <a href="#contact"    data-i18n="nav_contact"></a>
+  </div>
+  <div class="lang-sw" role="group" aria-label="Langue">
+    <button class="lb active" data-lang="fr" aria-pressed="true">FR</button>
+    <span class="lsep" aria-hidden="true">/</span>
+    <button class="lb" data-lang="es" aria-pressed="false">ES</button>
+    <span class="lsep" aria-hidden="true">/</span>
+    <button class="lb" data-lang="en" aria-pressed="false">EN</button>
+  </div>
+</nav>
+
+<main id="main">
+<section id="home" aria-label="Présentation">
+  <div class="hero-grid">
+
+    <!-- LEFT -->
+    <div>
+      <div class="status-pill lang-fade" data-i18n="status">
+        <span class="status-dot"></span>
+        <span data-i18n="status_text"></span>
+      </div>
+
+      <div class="hero-role lang-fade" data-i18n="role"></div>
+
+      <h1 class="hero-h1">
+        Ayoub<br><span class="dim">Kaber</span>
+      </h1>
+
+      <p class="hero-sub lang-fade" data-i18n="tagline"></p>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary lang-fade" data-i18n="cta_work"></a>
+        <a href="#contact" class="btn-outline lang-fade" data-i18n="cta_contact"></a>
+      </div>
+    </div>
+
+    <!-- RIGHT (IMAGE) -->
+    <div class="hero-visual">
+      <img src="images/ayyoub kaber.png" alt="Ayoub Kaber" class="hero-img">
+    </div>
+
+  </div>
+</section>
+<!-- ABOUT -->
+<section id="about" class="section" aria-labelledby="h-about">
+  <div class="s-label reveal lang-fade" data-i18n="nav_about"></div>
+
+  <div class="about-layout">
+    <!-- Left: Stats + what I do -->
+    <div class="reveal">
+      <div class="stat-grid">
+        <div class="stat-cell"><div class="stat-num">3+</div><div class="stat-lbl lang-fade" data-i18n="stat_proj"></div></div>
+        <div class="stat-cell"><div class="stat-num">7+</div><div class="stat-lbl lang-fade" data-i18n="stat_tech"></div></div>
+        <div class="stat-cell"><div class="stat-num">3</div><div class="stat-lbl lang-fade" data-i18n="stat_lang"></div></div>
+        <div class="stat-cell"><div class="stat-num">∞</div><div class="stat-lbl lang-fade" data-i18n="stat_passion"></div></div>
+      </div>
+
+      <div class="what-i-do">
+        <div class="do-item">
+          <div class="do-icon">⚙️</div>
+          <div class="do-text"><strong data-i18n="do_backend_title"></strong><span data-i18n="do_backend"></span></div>
+        </div>
+        <div class="do-item">
+          <div class="do-icon">🎨</div>
+          <div class="do-text"><strong data-i18n="do_frontend_title"></strong><span data-i18n="do_frontend"></span></div>
+        </div>
+        <div class="do-item">
+          <div class="do-icon">🗄️</div>
+          <div class="do-text"><strong data-i18n="do_db_title"></strong><span data-i18n="do_db"></span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Bio text -->
+    <div class="about-text reveal">
+      <h2 class="about-headline" id="h-about"><span class="lang-fade" data-i18n="about_hey"></span> <span class="accent-name">Ayoub Kaber<span style="color:var(--accent)">.</span></span></h2>
+      <p class="lang-fade" data-i18n="about_p1"></p>
+      <p class="lang-fade" data-i18n="about_p2"></p>
+      <p class="lang-fade" data-i18n="about_p3"></p>
+      <div class="about-pills">
+        <span class="pill">🇪🇸 España</span>
+        <span class="pill">🇫🇷 France</span>
+        <span class="pill">🇨🇦 Canada</span>
+        <span class="pill lang-fade" data-i18n="pill_hybrid"></span>
+        <span class="pill lang-fade" data-i18n="pill_junior"></span>
+        <span class="pill">Agile</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section" aria-labelledby="h-exp">
+  <div class="s-label reveal lang-fade" data-i18n="nav_exp"></div>
+  <h2 class="s-title reveal lang-fade" id="h-exp" data-i18n="exp_title"></h2>
+  <div class="exp-list">
+
+    <!-- Internship -->
+    <div class="exp-card reveal">
+      <div class="exp-header">
+        <div>
+          <div class="exp-company lang-fade" data-i18n="exp1_company"></div>
+          <div class="exp-role lang-fade" data-i18n="exp1_title"></div>
+          <div class="exp-location lang-fade" data-i18n="exp1_location"></div>
+        </div>
+        <div class="exp-date lang-fade" data-i18n="exp1_date"></div>
+      </div>
+      <p class="exp-desc lang-fade" data-i18n="exp1_desc"></p>
+      <ul class="exp-tasks" id="exp1-tasks"></ul>
+      <div class="exp-tech">
+        <span class="exp-badge">Excel</span>
+        <span class="exp-badge">Data Management</span>
+        <span class="exp-badge">Process Digitalization</span>
+        <span class="exp-badge">Technical Documentation</span>
+        <span class="exp-badge">Workflow Optimization</span>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="exp-card reveal">
+      <div class="exp-header">
+        <div>
+          <div class="exp-company lang-fade" data-i18n="exp2_company"></div>
+          <div class="exp-role lang-fade" data-i18n="exp2_title"></div>
+          <div class="exp-location lang-fade" data-i18n="exp2_location"></div>
+        </div>
+        <div class="exp-date lang-fade" data-i18n="exp2_date"></div>
+      </div>
+      <p class="exp-desc lang-fade" data-i18n="exp2_desc"></p>
+      <div class="exp-tech">
+        <span class="exp-badge">Java</span><span class="exp-badge">C#</span><span class="exp-badge">.NET</span>
+        <span class="exp-badge">PHP</span><span class="exp-badge">React</span><span class="exp-badge">MySQL</span>
+        <span class="exp-badge">SQL Server</span><span class="exp-badge">Docker</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- BACKEND -->
+<div class="skills-row">
+  <div class="skill-card" style="--lvl:82%">
+    <img src="images/java.svg" class="skill-img" alt="Java">
+    <div class="skill-name">Java</div>
+    <div class="skill-bar"><div class="skill-fill"></div></div>
+  </div>
+
+  <div class="skill-card" style="--lvl:88%">
+    <img src="images/csharp.svg" class="skill-img" alt="C#">
+    <div class="skill-name">C#</div>
+    <div class="skill-bar"><div class="skill-fill"></div></div>
+  </div>
+
+  <div class="skill-card" style="--lvl:85%">
+    <img src="images/dotnet.svg" class="skill-img" alt=".NET">
+    <div class="skill-name">.NET</div>
+    <div class="skill-bar"><div class="skill-fill"></div></div>
+  </div>
+
+  <div class="skill-card" style="--lvl:72%">
+    <img src="images/php.png" class="skill-img" alt="PHP">
+    <div class="skill-name">PHP</div>
+    <div class="skill-bar"><div class="skill-fill"></div></div>
+  </div>
+</div>
+
+<!-- FRONTEND -->
+<div class="skills-row">
+  <div class="skill-card" style="--lvl:86%">
+    <img src="images/React_Logo_SVG.svg (1).png" class="skill-img" alt="React">
+    <div class="skill-name">React</div>
+    <div class="skill-bar"><div class="skill-fill"></div></div>
+  </div>
+
+  <div class="skill-card" style="--lvl:80%">
+    <img src="images/html5.svg" class="skill-img" alt="HTML5">
+    <div class="skill-name">HTML5</div>
+    <div class="skill-bar"><div class="skill-fill"></div></div>
+  </div>
+
+  <div class="skill-card" style="--lvl:78%">
+    <img src="images/css3.svg" class="skill-img" alt="CSS3">
+    <div class="skill-name">CSS3</div>
+    <div class="skill-bar"><div class="skill-fill"></div></div>
+  </div>
+
+  <div class="skill-card" style="--lvl:75%">
+    <img src="images/tailwind.svg" class="skill-img" alt="Tailwind">
+    <div class="skill-name">Tailwind</div>
+    <div class="skill-bar"><div class="skill-fill"></div></div>
+  </div>
+
+  <div class="skill-card" style="--lvl:80%">
+    <img src="images/javascript.svg" class="skill-img" alt="JavaScript">
+    <div class="skill-name">JavaScript</div>
+    <div class="skill-bar"><div class="skill-fill"></div></div>
+  </div>
+</div>
+
+<!-- DATABASE -->
+<div class="skills-row">
+  <div class="skill-card" style="--lvl:82%">
+    <img src="images/sql.svg" class="skill-img" alt="MySQL">
+    <div class="skill-name">MySQL</div>
+    <div class="skill-bar"><div class="skill-fill"></div></div>
+  </div>
+
+  <div class="skill-card" style="--lvl:78%">
+    <img src="images/sqls.png" class="skill-img" alt="SQL Server">
+    <div class="skill-name">SQL Server</div>
+    <div class="skill-bar"><div class="skill-fill"></div></div>
+  </div>
+</div>
+
+<!-- DEVOPS -->
+<div class="skills-row">
+  <div class="skill-card" style="--lvl:76%">
+    <img src="images/docker.svg" class="skill-img" alt="Docker">
+    <div class="skill-name">Docker</div>
+    <div class="skill-bar"><div class="skill-fill"></div></div>
+  </div>
+
+  <div class="skill-card" style="--lvl:88%">
+    <img src="images/git.svg" class="skill-img" alt="Git">
+    <div class="skill-name">Git</div>
+    <div class="skill-bar"><div class="skill-fill"></div></div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<section id="projects" class="section" aria-labelledby="h-proj">
+  <div class="s-label reveal lang-fade" data-i18n="nav_projects"></div>
+  <h2 class="s-title reveal lang-fade" id="h-proj" data-i18n="projects_title"></h2>
+  <div class="projects-list">
+
+    <article class="proj reveal">
+      <span class="proj-num" aria-hidden="true">01</span>
+      <div>
+        <div class="proj-title lang-fade" data-i18n="proj1_name"></div>
+        <div class="proj-desc lang-fade" data-i18n="proj1_desc"></div>
+        <div class="proj-tags"><span class="proj-tag">C#</span><span class="proj-tag">.NET</span><span class="proj-tag">MS Access</span><span class="proj-tag lang-fade" data-i18n="proj1_tag"></span></div>
+      </div>
+      <span class="proj-arrow" aria-hidden="true">↗</span>
+    </article>
+
+    <article class="proj reveal">
+      <span class="proj-num" aria-hidden="true">02</span>
+      <div>
+        <div class="proj-title lang-fade" data-i18n="proj2_name"></div>
+        <div class="proj-desc lang-fade" data-i18n="proj2_desc"></div>
+        <div class="proj-tags"><span class="proj-tag">Excel</span><span class="proj-tag">VBA</span><span class="proj-tag lang-fade" data-i18n="proj2_tag"></span></div>
+      </div>
+      <span class="proj-arrow" aria-hidden="true">↗</span>
+    </article>
+
+    <article class="proj reveal">
+      <span class="proj-num" aria-hidden="true">03</span>
+      <div>
+        <div class="proj-title lang-fade" data-i18n="proj3_name"></div>
+        <div class="proj-desc lang-fade" data-i18n="proj3_desc"></div>
+        <div class="proj-tags"><span class="proj-tag">React.js</span><span class="proj-tag">JavaScript</span><span class="proj-tag">SQL</span><span class="proj-tag">REST API</span><span class="proj-tag">Docker</span></div>
+      </div>
+      <span class="proj-arrow" aria-hidden="true">↗</span>
+    </article>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section" aria-labelledby="contact-heading">
+  <div class="s-label reveal lang-fade" data-i18n="nav_contact" aria-hidden="true"></div>
+  <h2 id="contact-heading" class="s-title reveal lang-fade" data-i18n="contact_title"></h2>
+
+  <div class="contact-wrap">
+    <div class="reveal">
+      <div class="contact-big">
+        <span class="lang-fade" data-i18n="contact_line1"></span><br>
+        <span class="hollow lang-fade" data-i18n="contact_line2"></span>
+      </div>
+      <p class="contact-note lang-fade" data-i18n="contact_note"></p>
+      <nav class="social-links" aria-label="Liens sociaux">
+        <a href="mailto:contactkaberayoub@gmail.com" class="soc-link">
+          <span class="soc-icon" aria-hidden="true">✉</span> contactkaberayoub@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/ayyoub-kaber-54bb39328" target="_blank" rel="noopener noreferrer" class="soc-link">
+          <span class="soc-icon" aria-hidden="true">in</span> linkedin.com/in/ayyoub-kaber
+        </a>
+        <a href="https://github.com/ayoubkaber" target="_blank" rel="noopener noreferrer" class="soc-link">
+          <span class="soc-icon" aria-hidden="true">⌥</span> github.com/ayoubkaber
+        </a>
+      </nav>
+    </div>
+
+    <div class="reveal">
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-hp" aria-hidden="true">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="fname" data-i18n="form_name"></label>
+          <input class="form-input" id="fname" name="name" type="text" autocomplete="name" aria-required="true" maxlength="80">
+          <span class="field-err" id="err-name" role="alert" data-i18n="err_name"></span>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="femail">Email</label>
+          <input class="form-input" id="femail" name="email" type="email" autocomplete="email" aria-required="true" maxlength="120">
+          <span class="field-err" id="err-email" role="alert"></span>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="fmsg" data-i18n="form_msg"></label>
+          <textarea class="form-textarea" id="fmsg" name="message" aria-required="true" maxlength="1000"></textarea>
+          <span class="field-err" id="err-msg" role="alert" data-i18n="err_msg"></span>
+          <div id="fmsg-count" class="char-count" aria-live="polite">0 / 1000</div>
+        </div>
+        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+        <button type="submit" class="btn-primary lang-fade" id="fsubmit" style="align-self:flex-start;border:none" data-i18n="form_send"></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer role="contentinfo">
+  <span>© 2026 Ayoub Kaber</span>
+  <span class="lang-fade" data-i18n="footer_built"></span>
+  <span class="footer-accent">Full Stack Developer</span>
+</footer>
+
+<script>
+/* ══ TRANSLATIONS ══════════════════════════════════════════════════════ */
+const T = {
+  fr:{
+    status_text:'Disponible pour travailler',
+    status:'Disponible pour travailler',
+    role:'Développeur Full Stack Junior',
+    tagline:'Je conçois des applications web complètes, performantes et bien structurées — du backend à l\'interface utilisateur.',
+    cta_work:'Voir mes projets',cta_contact:'Me contacter',
+    nav_about:'À propos',nav_exp:'Expérience',nav_skills:'Compétences',nav_projects:'Projets',nav_contact:'Contact',
+    about_hey:'Bonjour, je suis',
+    about_p1:'Je suis un <strong>développeur Full Stack Junior passionné</strong>, diplômé en DTS MIAGE. Je me spécialise dans la conception d\'applications web modernes, performantes et bien structurées.',
+    about_p2:'Je combine un <strong>backend solide</strong> (Java, C#, .NET, PHP) avec un <strong>frontend moderne</strong> (React, Tailwind, HTML/CSS) et des <strong>bases de données relationnelles</strong> (MySQL, SQL Server).',
+    about_p3:'Mon objectif : intégrer une équipe dynamique où je peux <em>apprendre rapidement, contribuer à des projets concrets et évoluer en développement web</em>.',
+    stat_proj:'Projets',stat_tech:'Technologies',stat_lang:'Langues',stat_passion:'Passion',
+    do_backend_title:'Backend solide',do_backend:'Java, C#, .NET, PHP',
+    do_frontend_title:'Frontend moderne',do_frontend:'React, Tailwind, HTML, CSS',
+    do_db_title:'Bases de données',do_db:'MySQL, SQL Server',
+    pill_hybrid:'Poste hybride',pill_junior:'Postes junior',
+    exp_title:'Expérience.',
+    exp1_date:'Juil – Août 2025',exp1_company:'Administration Publique · Maroc',
+    exp1_title:'Stage en Transformation Digitale',exp1_location:'Ksar El Kebir, Maroc',
+    exp1_desc:'Participation à un projet de modernisation et digitalisation des processus administratifs, améliorant l\'efficacité opérationnelle via des outils numériques et une gestion structurée des données.',
+    exp1_tasks:['Analyse des exigences fonctionnelles et identification des goulots d\'étranglement dans les flux de travail','Rédaction de documentation technique et description détaillée des processus internes','Gestion et validation des données avec Excel (tableaux croisés, formules avancées, validation)','Digitalisation de plus de 50 dossiers et registres administratifs papier en format numérique structuré','Optimisation des flux de travail internes via des outils numériques, réduisant les délais de traitement'],
+    exp2_date:'2023 – 2025',exp2_company:'Formation Académique',
+    exp2_title:'DTS MIAGE – Développement Logiciel',exp2_location:'Maroc',
+    exp2_desc:'Formation de 2 ans en génie logiciel axée sur le développement Full Stack, bases de données relationnelles, méthodes agiles et architecture client-serveur.',
+    skills_title:'Mes outils.',skills_intro:'Technologies que j\'utilise pour construire des produits robustes, du backend au déploiement.',
+    cat_backend:'Backend',cat_frontend:'Frontend',cat_db:'Bases de données',cat_devops:'DevOps & Outils',
+    projects_title:'Ce que j\'ai construit.',
+    proj1_name:'Système de Réservation de Films',
+    proj1_desc:'Application client-serveur en temps réel pour gérer les réservations de films, avec logique métier robuste et persistance des données.',proj1_tag:'Client-Serveur',
+    proj2_name:'Système de Facturation – Parfum de Luxe',
+    proj2_desc:'Système de facturation automatisé pour Parfum de Luxe avec macros VBA. Réduction du temps de facturation de 70%.',proj2_tag:'Automatisation',
+    proj3_name:'Application CRUD Web',
+    proj3_desc:'Application CRUD complète — React frontend, API REST .NET, base SQL. Conteneurisée avec Docker.',
+    contact_line1:'Parlons',contact_line2:'ensemble.',
+    contact_note:'Je cherche des opportunités en Espagne, France et Canada — stage, alternance ou poste junior.',
+    form_name:'Nom',form_msg:'Message',form_send:'Envoyer',
+    form_sending:'Envoi…',form_ok:'Message envoyé ! Je vous répondrai bientôt.',form_err:'Erreur d\'envoi. Réessayez.',
+    err_name:'Le nom doit comporter au moins 2 caractères.',err_email:'Entrez une adresse email valide.',err_msg:'Le message doit comporter au moins 10 caractères.',
+    footer_built:'Conçu et développé avec ♥',
+  },
+  es:{
+    status_text:'Disponible para trabajo',
+    status:'Disponible para trabajo',
+    role:'Desarrollador Full Stack Junior',
+    tagline:'Diseño aplicaciones web completas, eficientes y bien estructuradas — del backend a la interfaz de usuario.',
+    cta_work:'Ver proyectos',cta_contact:'Contactarme',
+    nav_about:'Sobre mí',nav_exp:'Experiencia',nav_skills:'Habilidades',nav_projects:'Proyectos',nav_contact:'Contacto',
+    about_hey:'Hola, soy',
+    about_p1:'Soy un <strong>desarrollador Full Stack Junior apasionado</strong>, diplomado en DTS MIAGE. Me especializo en el diseño de aplicaciones web modernas, eficientes y bien estructuradas.',
+    about_p2:'Combino un <strong>backend sólido</strong> (Java, C#, .NET, PHP) con un <strong>frontend moderno</strong> (React, Tailwind, HTML/CSS) y <strong>bases de datos relacionales</strong> (MySQL, SQL Server).',
+    about_p3:'Mi objetivo: unirme a un equipo dinámico donde pueda <em>aprender rápido, contribuir a proyectos concretos y crecer en desarrollo web</em>.',
+    stat_proj:'Proyectos',stat_tech:'Tecnologías',stat_lang:'Idiomas',stat_passion:'Pasión',
+    do_backend_title:'Backend sólido',do_backend:'Java, C#, .NET, PHP',
+    do_frontend_title:'Frontend moderno',do_frontend:'React, Tailwind, HTML, CSS',
+    do_db_title:'Bases de datos',do_db:'MySQL, SQL Server',
+    pill_hybrid:'Rol híbrido',pill_junior:'Posición junior',
+    exp_title:'Experiencia.',
+    exp1_date:'Jul – Ago 2025',exp1_company:'Administración Pública · Marruecos',
+    exp1_title:'Prácticas en Transformación Digital',exp1_location:'Ksar El Kebir, Marruecos',
+    exp1_desc:'Participé en un proyecto de modernización y digitalización de procesos administrativos, mejorando la eficiencia operativa mediante herramientas digitales y gestión estructurada de datos.',
+    exp1_tasks:['Análisis de requisitos funcionales para identificar cuellos de botella en los flujos de trabajo','Redacción de documentación técnica y descripción de procesos internos','Gestión y validación de datos con Excel (tablas dinámicas, fórmulas avanzadas, validación)','Digitalización de más de 50 expedientes y registros administrativos en papel a formato digital','Optimización de flujos de trabajo internos, reduciendo los tiempos de gestión'],
+    exp2_date:'2023 – 2025',exp2_company:'Formación Académica',
+    exp2_title:'DTS MIAGE – Desarrollo de Software',exp2_location:'Marruecos',
+    exp2_desc:'Formación de 2 años en ingeniería de software con enfoque en desarrollo Full Stack, bases de datos relacionales, metodologías ágiles y arquitectura cliente-servidor.',
+    skills_title:'Mis herramientas.',skills_intro:'Tecnologías que uso para construir productos robustos, del backend al despliegue.',
+    cat_backend:'Backend',cat_frontend:'Frontend',cat_db:'Bases de datos',cat_devops:'DevOps & Herramientas',
+    projects_title:'Lo que he construido.',
+    proj1_name:'Sistema de Reserva de Películas',
+    proj1_desc:'Aplicación cliente-servidor en tiempo real para gestionar reservas de películas, con lógica de negocio robusta y persistencia de datos.',proj1_tag:'Cliente-Servidor',
+    proj2_name:'Sistema de Facturación – Parfum de Luxe',
+    proj2_desc:'Sistema de facturación automatizado para Parfum de Luxe con macros VBA. Redujo el tiempo de facturación un 70%.',proj2_tag:'Automatización',
+    proj3_name:'Aplicación CRUD Web',
+    proj3_desc:'Aplicación CRUD completa — React en frontend, API REST .NET y base de datos SQL. Contenedorizada con Docker.',
+    contact_line1:'Hablemos',contact_line2:'juntos.',
+    contact_note:'Busco oportunidades en España, Francia y Canadá — prácticas, alternancia o posición junior.',
+    form_name:'Nombre',form_msg:'Mensaje',form_send:'Enviar mensaje',
+    form_sending:'Enviando…',form_ok:'¡Mensaje enviado! Te responderé pronto.',form_err:'Error al enviar. Inténtalo de nuevo.',
+    err_name:'El nombre debe tener al menos 2 caracteres.',err_email:'Introduce un email válido.',err_msg:'El mensaje debe tener al menos 10 caracteres.',
+    footer_built:'Diseñado y desarrollado con ♥',
+  },
+  en:{
+    status_text:'Available for work',
+    status:'Available for work',
+    role:'Junior Full Stack Developer',
+    tagline:'I build complete, high-performance, well-structured web applications — from backend logic to user interface.',
+    cta_work:'See my work',cta_contact:'Get in touch',
+    nav_about:'About',nav_exp:'Experience',nav_skills:'Skills',nav_projects:'Projects',nav_contact:'Contact',
+    about_hey:'Hi, I\'m',
+    about_p1:'I\'m a <strong>passionate Junior Full Stack Developer</strong>, graduated in DTS MIAGE. I specialise in designing modern, high-performance, well-structured web applications.',
+    about_p2:'I combine a <strong>solid backend</strong> (Java, C#, .NET, PHP) with a <strong>modern frontend</strong> (React, Tailwind, HTML/CSS) and <strong>relational databases</strong> (MySQL, SQL Server).',
+    about_p3:'My goal: join a dynamic team where I can <em>learn quickly, contribute to real-world projects and grow as a web developer</em>.',
+    stat_proj:'Projects',stat_tech:'Technologies',stat_lang:'Languages',stat_passion:'Passion',
+    do_backend_title:'Solid backend',do_backend:'Java, C#, .NET, PHP',
+    do_frontend_title:'Modern frontend',do_frontend:'React, Tailwind, HTML, CSS',
+    do_db_title:'Databases',do_db:'MySQL, SQL Server',
+    pill_hybrid:'Hybrid role',pill_junior:'Junior position',
+    exp_title:'Experience.',
+    exp1_date:'Jul – Aug 2025',exp1_company:'Public Administration · Morocco',
+    exp1_title:'Digital Transformation Internship',exp1_location:'Ksar El Kebir, Morocco',
+    exp1_desc:'Contributed to a digitalization and process modernisation project in a public institution, improving operational efficiency through data management and digital tooling.',
+    exp1_tasks:['Analysed functional and administrative requirements to identify workflow bottlenecks','Wrote technical documentation and detailed process descriptions for internal procedures','Managed and validated datasets using advanced Excel (pivot tables, formulas, data validation)','Digitised 50+ physical administrative files and records into structured digital formats','Optimised internal workflows with digital tools, significantly reducing processing times'],
+    exp2_date:'2023 – 2025',exp2_company:'Academic Training',
+    exp2_title:'DTS MIAGE – Software Engineering',exp2_location:'Morocco',
+    exp2_desc:'2-year software engineering programme focused on Full Stack development, relational databases, Agile methodologies, and client-server architecture.',
+    skills_title:'My toolkit.',skills_intro:'Technologies I use daily to build robust products, from backend logic to deployment.',
+    cat_backend:'Backend',cat_frontend:'Frontend',cat_db:'Databases',cat_devops:'DevOps & Tools',
+    projects_title:'What I\'ve built.',
+    proj1_name:'Movie Booking System',
+    proj1_desc:'Real-time client-server app for managing movie reservations, with robust business logic and data persistence.',proj1_tag:'Client-Server',
+    proj2_name:'Billing System – Parfum de Luxe',
+    proj2_desc:'Automated billing system for Parfum de Luxe using VBA macros. Cut invoicing time by 70%.',proj2_tag:'Automation',
+    proj3_name:'CRUD Web Application',
+    proj3_desc:'Full-featured CRUD app — React frontend, .NET REST API, SQL database. Containerised with Docker.',
+    contact_line1:'Let\'s',contact_line2:'talk.',
+    contact_note:'Looking for opportunities in Spain, France and Canada — internship, work-study, or junior roles.',
+    form_name:'Name',form_msg:'Message',form_send:'Send message',
+    form_sending:'Sending…',form_ok:'Message sent! I\'ll get back to you soon.',form_err:'Failed to send. Please try again.',
+    err_name:'Name must be at least 2 characters.',err_email:'Please enter a valid email.',err_msg:'Message must be at least 10 characters.',
+    footer_built:'Designed and built with ♥',
+  }
+};
+
+/* ══ LANGUAGE ══════════════════════════════════════════════════════════ */
+let lang = 'fr';
+
+function renderTasks(l){
+  const ul = document.getElementById('exp1-tasks');
+  if(!ul) return;
+  ul.innerHTML = (T[l].exp1_tasks||[]).map(t=>`<li>${t}</li>`).join('');
+}
+
+function applyLang(l){
+  document.querySelectorAll('.lang-fade').forEach(el=>el.classList.add('sw'));
+  setTimeout(()=>{
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      const k=el.dataset.i18n;
+      if(T[l][k]!==undefined) el.innerHTML=T[l][k];
+    });
+    renderTasks(l);
+    document.documentElement.lang=l;
+    document.querySelectorAll('.lang-fade').forEach(el=>el.classList.remove('sw'));
+  },220);
+  document.querySelectorAll('.lb').forEach(b=>{
+    const a=b.dataset.lang===l;
+    b.classList.toggle('active',a);
+    b.setAttribute('aria-pressed',a);
+  });
+  lang=l;
+}
+document.querySelectorAll('.lb').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.lang!==lang)applyLang(b.dataset.lang)}));
+applyLang('fr');
+
+/* ══ FORM ══════════════════════════════════════════════════════════════ */
+const FORMSPREE_ID = 'xpqopnnp';
+
+function validateField(id,errId,check){
+  const el=document.getElementById(id);
+  const err=document.getElementById(errId);
+  const fail=check(el.value.trim());
+  el.classList.toggle('invalid',fail);
+  err.classList.toggle('show',fail);
+  return !fail;
+}
+
+document.getElementById('contactForm').addEventListener('submit', async e=>{
+  e.preventDefault();
+  const t=T[lang];
+  const st=document.getElementById('formStatus');
+  const btn=document.getElementById('fsubmit');
+  if(document.querySelector('[name="_gotcha"]').value) return;
+  const ok=[
+    validateField('fname','err-name',v=>v.length<2),
+    validateField('femail','err-email',v=>!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)),
+    validateField('fmsg','err-msg',v=>v.length<10),
+  ].every(Boolean);
+  if(!ok) return;
+  btn.textContent=t.form_sending;btn.disabled=true;st.className='form-status';
+  const payload={name:document.getElementById('fname').value.trim(),email:document.getElementById('femail').value.trim(),message:document.getElementById('fmsg').value.trim()};
+  try{
+    if(FORMSPREE_ID&&FORMSPREE_ID!=='YOUR_FORM_ID'){
+      const res=await fetch(`https://formspree.io/f/${FORMSPREE_ID}`,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
+      const json=await res.json();
+      if(!res.ok) throw new Error(json.errors?.[0]?.message||t.form_err);
+    } else {
+      await new Promise(r=>setTimeout(r,1200));
+    }
+    st.className='form-status ok';st.textContent='✓ '+t.form_ok;e.target.reset();
+    document.querySelectorAll('.form-input,.form-textarea').forEach(el=>el.classList.remove('invalid'));
+    document.getElementById('fmsg-count').textContent='0 / 1000';
+  }catch(err){st.className='form-status err';st.textContent='⚠ '+(err.message||t.form_err);}
+  finally{btn.textContent=T[lang].form_send;btn.disabled=false;}
+});
+
+document.querySelectorAll('.form-input,.form-textarea').forEach(el=>{
+  el.addEventListener('input',()=>{el.classList.remove('invalid');const e=document.getElementById('err-'+el.id.replace('f',''));if(e)e.classList.remove('show');});
+});
+document.getElementById('fmsg').addEventListener('input',()=>{
+  document.getElementById('fmsg-count').textContent=document.getElementById('fmsg').value.length+' / 1000';
+});
+
+/* ══ CURSOR ══════════════════════════════════════════════════════════ */
+const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
+(function loop(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(loop)})();
+document.querySelectorAll('a,button,.proj,.skill-card,.do-item,.exp-card,.stat-cell').forEach(el=>{
+  el.addEventListener('mouseenter',()=>document.body.classList.add('hovering'));
+  el.addEventListener('mouseleave',()=>document.body.classList.remove('hovering'));
+});
+
+/* ══ SCROLL REVEAL ════════════════════════════════════════════════════ */
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('in');
+      // skill bars
+      entry.target.querySelectorAll('.skill-card').forEach(c=>c.classList.add('in'));
+      if(entry.target.classList.contains('skill-card')) entry.target.classList.add('in');
+    }
+  });
+},{threshold:.1});
+document.querySelectorAll('.reveal,.skill-card').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
