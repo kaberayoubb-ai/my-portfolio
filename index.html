@@ -278,16 +278,57 @@
     /* RESPONSIVE */
     @media(max-width:960px){
       .hero-grid,.about-layout,.contact-wrap{grid-template-columns:1fr}
-      .hero-visual,.nav-links{display:none}
+      .nav-links{display:none}
+      .hero-visual{
+        opacity:1!important;
+        animation:none!important;
+        display:flex!important;
+        justify-content:center;
+        align-items:center;
+        width:100%;
+        margin-top:2rem;
+      }
+      .hero-img{
+        max-width:300px;
+        width:100%;
+        display:block;
+      }
+      .hero-h1{font-size:clamp(3.5rem,10vw,6rem)}
     }
     @media(max-width:640px){
+      #home{padding:7rem 5vw 4rem}
+      .hero-grid{gap:2rem}
+      .hero-visual{
+        opacity:1!important;
+        animation:none!important;
+        display:flex!important;
+        justify-content:center;
+        align-items:center;
+        width:100%;
+        margin-top:1.5rem;
+      }
+      .hero-img{
+        max-width:100%;
+        width:100%;
+        border-radius:10px;
+      }
+      .hero-h1{font-size:clamp(3rem,12vw,5rem)}
+      .hero-sub{font-size:1rem}
+      .hero-cta{flex-direction:column;gap:.75rem}
+      .btn-primary,.btn-outline{text-align:center;width:100%}
       .proj{grid-template-columns:2rem 1fr;gap:1rem}
       .proj-arrow{display:none}
       footer{flex-direction:column;text-align:center}
       .skills-row{grid-template-columns:repeat(auto-fill,minmax(110px,1fr))}
       .stat-grid{grid-template-columns:1fr 1fr}
+      .section{padding:4rem 5vw}
+      .s-title{font-size:clamp(2.2rem,8vw,3.5rem);margin-bottom:2rem}
+      .about-headline{font-size:clamp(2rem,8vw,3rem)}
+      .exp-card{padding:1.5rem}
+      .exp-header{flex-direction:column;gap:.75rem}
+      .contact-big{font-size:clamp(2.8rem,12vw,5rem)}
     }
-    @media print{#cur,#cur-ring,nav,.hero-visual{display:none}body{cursor:auto;background:#fff;color:#000}.section{border:none;padding:2rem 0}}
+    @media print{#cur,#cur-ring,nav{display:none}body{cursor:auto;background:#fff;color:#000}.section{border:none;padding:2rem 0}}
   </style>
 </head>
 
@@ -342,7 +383,7 @@
 
     <!-- RIGHT (IMAGE) -->
     <div class="hero-visual">
-      <img src="images/ayyoub kaber.png" alt="Ayoub Kaber" class="hero-img">
+      <img src="images/ayoub-kaber.png" alt="Ayoub Kaber" class="hero-img">
     </div>
 
   </div>
@@ -584,8 +625,8 @@
       </div>
       <p class="contact-note lang-fade" data-i18n="contact_note"></p>
       <nav class="social-links" aria-label="Liens sociaux">
-        <a href="mailto:contactkaberayoub@gmail.com" class="soc-link">
-          <span class="soc-icon" aria-hidden="true">✉</span> contactkaberayoub@gmail.com
+        <a href="/cdn-cgi/l/email-protection#89eae6e7fde8eafde2e8ebecfbe8f0e6fcebc9eee4e8e0e5a7eae6e4" class="soc-link">
+          <span class="soc-icon" aria-hidden="true">✉</span> <span class="__cf_email__" data-cfemail="b7d4d8d9c3d6d4c3dcd6d5d2c5d6ced8c2d5f7d0dad6dedb99d4d8da">[email&#160;protected]</span>
         </a>
         <a href="https://www.linkedin.com/in/ayyoub-kaber-54bb39328" target="_blank" rel="noopener noreferrer" class="soc-link">
           <span class="soc-icon" aria-hidden="true">in</span> linkedin.com/in/ayyoub-kaber
@@ -632,7 +673,7 @@
   <span class="footer-accent">Full Stack Developer</span>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 /* ══ TRANSLATIONS ══════════════════════════════════════════════════════ */
 const T = {
   fr:{
@@ -851,12 +892,4 @@ const obs=new IntersectionObserver((entries)=>{
     if(entry.isIntersecting){
       entry.target.classList.add('in');
       // skill bars
-      entry.target.querySelectorAll('.skill-card').forEach(c=>c.classList.add('in'));
-      if(entry.target.classList.contains('skill-card')) entry.target.classList.add('in');
-    }
-  });
-},{threshold:.1});
-document.querySelectorAll('.reveal,.skill-card').forEach(el=>obs.observe(el));
-</script>
-</body>
-</html>
+      entry.target.querySelectorAll('.skill-card').fo
